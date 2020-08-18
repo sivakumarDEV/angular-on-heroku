@@ -1,15 +1,23 @@
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { LaunchDataDashboardComponent } from './launch-dashboard/launch-data-dashboard/launch-data-dashboard.component';
+import { HttpClientModule } from '@angular/common/http';
+import { MatCardModule, MatToolbarModule, MatButtonModule } from '@angular/material';
+import {ScrollingModule} from '@angular/cdk/scrolling';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        RouterTestingModule,
+        MatCardModule, MatToolbarModule, MatButtonModule,
+          ScrollingModule, HttpClientModule,
       ],
       declarations: [
-        AppComponent
+        AppComponent,
+        LaunchDataDashboardComponent
+
       ],
     }).compileComponents();
   }));
@@ -30,6 +38,5 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('Space-X-Assignment app is running!');
   });
 });

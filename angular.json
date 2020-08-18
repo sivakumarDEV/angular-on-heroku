@@ -24,6 +24,7 @@
               "src/assets"
             ],
             "styles": [
+              "src/custom-theme.scss",
               "src/styles.css"
             ],
             "scripts": []
@@ -120,6 +121,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Space-X-Assignment"
+    }
+  },
+  "defaultProject": "Space-X-Assignment",
+  "cli": {
+    "analytics": "f8237558-5c85-424c-bf72-576b58108ff6"
+  }
 }
